@@ -13,6 +13,12 @@ const ToDo = () => {
   const [progress, setProgress] = useState([]);
   const [completed, setCompleted] = useState([]);
 
+  /* 
+  const { user } = useContext(AuthContext);
+    const { register, handleSubmit, reset } = useForm();
+    const axiosPublic = useAxiosPublic();
+    */
+
   const { data: task = [], refetch } = useQuery({
     queryKey: ["task"],
     queryFn: async () => {
@@ -391,6 +397,7 @@ const ToDo = () => {
                               <p>{task.Description}</p>
                               <div className="flex items-center justify-between mt-4">
 
+
                                 <span>10 January</span>
                               </div>
                             </div>
@@ -410,5 +417,6 @@ const ToDo = () => {
     </div>
   );
 };
+
 
 export default ToDo;
